@@ -1,0 +1,54 @@
+<!-- FindIt - Lost & Found Management System -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt - Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FindIt - Lost & Found System</h1>
+    </header>
+    
+    <!-- Report Lost Item -->
+    <section class="report-lost">
+        <h2>Report Lost Item</h2>
+        <input type="text" id="lostItemName" placeholder="Item Name">
+        <input type="text" id="lostItemLocation" placeholder="Last Seen Location">
+        <textarea id="lostItemDescription" placeholder="Description"></textarea>
+        <input type="file" id="lostItemImage">
+        <button onclick="reportLostItem()">Report Lost Item</button>
+        <ul id="lostItemsList"></ul>
+    </section>
+    
+    <!-- Report Found Item -->
+    <section class="report-found">
+        <h2>Report Found Item</h2>
+        <input type="text" id="foundItemName" placeholder="Item Name">
+        <input type="text" id="foundItemLocation" placeholder="Found Location">
+        <textarea id="foundItemDescription" placeholder="Description"></textarea>
+        <input type="file" id="foundItemImage">
+        <button onclick="reportFoundItem()">Report Found Item</button>
+        <ul id="foundItemsList"></ul>
+    </section>
+    
+    <!-- Search & Match System -->
+    <section class="search-match">
+        <h2>Search for Lost & Found Items</h2>
+        <input type="text" id="searchQuery" placeholder="Enter item name or location">
+        <button onclick="searchItems()">Search</button>
+        <ul id="searchResults"></ul>
+    </section>
+    
+    <!-- Notifications & Integration -->
+    <section class="notifications">
+        <h2>Notifications</h2>
+        <p>Get alerts when a matching lost item is found!</p>
+        <button onclick="subscribeNotifications()">Enable Notifications</button>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
